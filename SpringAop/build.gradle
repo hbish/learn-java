@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.aspectj:aspectjweaver:1.8.2"
+    compile "org.aspectj:aspectjrt:1.8.2"
+    compile "aopalliance:aopalliance:1.0"
+    compile "cglib:cglib:3.1"
+    compile "asm:asm-parent:3.3.1"
+    compile 'org.springframework:spring-context:4.1.5.RELEASE'
+}
+
+jar {
+    baseName = 'SpringAop'
+    version =  '0.0.1'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}

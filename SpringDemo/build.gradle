@@ -1,0 +1,18 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework:spring-context:4.1.5.RELEASE'
+}
+
+jar {
+    baseName = 'SpringAop'
+    version =  '0.0.1'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}

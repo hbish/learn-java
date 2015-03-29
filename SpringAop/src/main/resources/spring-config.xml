@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+              http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+       <aop:aspectj-autoproxy />
+
+       <bean id="triangle" class="com.hbish.springaop.model.Triangle">
+              <property name="name" value="triangle"/>
+       </bean>
+
+       <bean id="circle" class="com.hbish.springaop.model.Circle">
+              <!--<property name="name" value="circle"/>-->
+       </bean>
+
+       <bean id="shapeService" class="com.hbish.springaop.service.ShapeService" autowire="byName">
+       </bean>
+
+       <bean id="loggingAspect" class="com.hbish.springaop.aspect.LoggingAspect" />
+       <aop:config>
+              <aop:aspect id="loggingAspect" ref="loggingAspect">
+                     <aop:around method="aroundAdvice" pointcut="execution(* get*())" />
+              </aop:aspect>
+       </aop:config>
+
+</beans>
