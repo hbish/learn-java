@@ -1,3 +1,8 @@
 rootProject.name = 'learn-java'
 
-include("SpringDemo", "SpringAop", "jdbcDemo")
+include 'SpringDemo'
+include 'SpringAop'
+include 'jdbcDemo'
+include 'SpringRetry'
+include 'SpringWebServiceCors'
+

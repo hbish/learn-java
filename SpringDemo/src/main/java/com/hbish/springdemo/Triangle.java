@@ -1,4 +1,4 @@
-package com.hbish.springdemo.test;
+package com.hbish.springdemo;
 
 import java.util.List;
 

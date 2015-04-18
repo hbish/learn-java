@@ -6,7 +6,7 @@
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
             ">
 
-    <bean id="triangle" class="com.hbish.springdemo.test.Triangle">
+    <bean id="triangle" class="com.hbish.springdemo.Triangle">
         <property name="points">
             <list>
                 <ref bean="pointA" />
@@ -16,18 +16,18 @@
         </property>
     </bean>
 
-    <bean id="pointA" class="com.hbish.springdemo.test.Point">
+    <bean id="pointA" class="com.hbish.springdemo.Point">
         <qualifier value="circleRelated" />
         <property name="x" value="0"/>
         <property name="y" value="0"/>
     </bean>
 
-    <bean id="pointB" class="com.hbish.springdemo.test.Point">
+    <bean id="pointB" class="com.hbish.springdemo.Point">
         <property name="x" value="-20"/>
         <property name="y" value="0"/>
     </bean>
 
-    <bean id="center" class="com.hbish.springdemo.test.Point">
+    <bean id="center" class="com.hbish.springdemo.Point">
         <property name="x" value="20"/>
         <property name="y" value="0"/>
     </bean>

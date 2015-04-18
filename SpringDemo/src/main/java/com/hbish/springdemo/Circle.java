@@ -1,4 +1,4 @@
-package com.hbish.springdemo.test;
+package com.hbish.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;

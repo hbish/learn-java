@@ -1,4 +1,4 @@
-package com.hbish.springdemo.test;
+package com.hbish.springdemo;
 
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;

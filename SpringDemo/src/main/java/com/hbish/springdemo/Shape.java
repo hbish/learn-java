@@ -1,4 +1,4 @@
-package com.hbish.springdemo.test;
+package com.hbish.springdemo;
 
 /**
  * Created by bshi on 22/03/2015.
